@@ -2,8 +2,11 @@ const startTime = Date.now();
 const entries = 1000000;
 
 const fs = require("fs");
-const data = fs.readFileSync('./src/products.json', { encoding: "utf8" });
-const products = JSON.parse(data); 
+const dataProducts = fs.readFileSync('./src/products.json', { encoding: "utf8" });
+const products = JSON.parse(dataProducts); 
+
+const dataBuyers = fs.readFileSync('./src/buyers.json', { encoding: "utf8" });
+const buyers = JSON.parse(dataBuyers); 
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -18,21 +21,47 @@ function  genRandomDate() {
     return date + ":" + month + ":" + year;
 }
 
+function  genRandomTime() {
+    let hours = getRandomInt(24);
+    if(hours < 10) hours = "0" + hours;
+    let mins = getRandomInt(59);
+    if(mins < 10) mins = "0" + mins;
+    let seconds =  getRandomInt(59);
+    if(seconds < 10) seconds = "0" + seconds;
+    return hours + ":" + mins + ":" + seconds;
+}
+
 function msecToString(ml) {
     let seconds = Math.round(ml / 1000);
     let mins = Math.round(ml / 60000);
     let hours = Math.floor(mins / 60);
     mins %= 60;
-    if (mins < 10)
-      mins = '0' + mins;
+    if (mins < 10) mins = '0' + mins;
     return hours + ':' + mins + ":" + seconds + ":" + ml;
 }
 
-let text = "date,name,price\n";
+let text = "time,date,product,purchase price,sale price,buyer id,buyer name,membership level,check number\n";
 
+let itemsInCart = getRandomInt(20);
+let curBuyer = buyers[getRandomInt(10)];
+let checkNum;
 for(i = 0; i < entries; i++){
-    const x = getRandomInt(products.length);
-    text += genRandomDate() + "," + products[x].name + "," + products[x].price + "\n";
+    if(i % itemsInCart == 0){
+        check = getRandomInt(20);
+        curBuyer = buyers[getRandomInt(10)];
+        checkNum = entries - check;
+    } 
+    let x = getRandomInt(products.length);
+    let xTime = genRandomTime();
+    let xDate = genRandomDate();
+    let product = products[x].name;
+    let purchasePrice = (products[x].price / 100 * getRandomInt(20)).toFixed(2);
+    let salePrice = products[x].price;
+    let buyerId = curBuyer.id;
+    let buyer = curBuyer.name;
+    let membershipLevel = curBuyer.membership_level;
+    text += xTime + "," + xDate + "," + product + "," + purchasePrice + ","+ salePrice + "," + buyerId + 
+            "," + buyer + "," + membershipLevel + "," + checkNum +"\n";
 }
      
 fs.writeFile("products.csv", text, function(error){

@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Aleksey Smirnov",
+        "membership_level": "Gold",
+        "points": 1500,
+        "email": "aleksey.smirnov@nomail.com",
+        "phone": "+7 910 000 00 00"
+    },
+    {
+        "id": 2,
+        "name": "Anna Ivanova",
+        "membership_level": "Silver",
+        "points": 800,
+        "email": "anna.ivanova@nomail.com",
+        "phone": "+7 910 000 00 00"
+    },
+    {
+        "id": 3,
+        "name": "Dmitry Petrov",
+        "membership_level": "Bronze",
+        "points": 300,
+        "email": "dmitriy.petrov@nomail.com",
+        "phone": "+7 910 000 00 00"
+    },
+    {
+        "id": 4,
+        "name": "Ekaterina Yakova",
+        "membership_level": "Gold",
+        "points": 1000,
+        "email": "ekaterina.yakova@nomail.com",
+        "phone": "+7 910 000 00 00"
+    },
+    {
+        "id": 5,
+        "name": "Igor Solovyov",
+        "membership_level": "Silver",
+        "points": 1550,
+        "email": "igor.solovyev@nomail.com",
+        "phone": "+7 910 000 00 00"
+    },
+    {
+        "id": 6,
+        "name": "Maria Kozlova",
+        "membership_level": "Bronze",
+        "points": 2000,
+        "email": "mariya.kozlova@nomail.com",
+        "phone": "+7 910 000 00 00"
+    },
+    {
+        "id": 7,
+        "name": "Sergey Zakharov",
+        "membership_level": "Gold",
+        "points": 1000,
+        "email": "sergey.zakharov@nomail.com",
+        "phone": "+7 910 000 00 00"
+    },
+    {
+        "id": 8,
+        "name": "Olga Smirnova",
+        "membership_level": "Silver",
+        "points": 900,
+        "email": "olga.smirnova@nomail.com",
+        "phone": "+7 910 000 00 00"
+    },
+    {
+        "id": 9,
+        "name": "Andrey Grigoriev",
+        "membership_level": "Bronze",
+        "points": 1000,
+        "email": "andrey.grigoryev@nomail.com",
+        "phone": "+7 910 000 00 00"
+    },
+    {
+        "id": 10,
+        "name": "Victoria Pavlova",
+        "membership_level": "Gold",
+        "points": 1100,
+        "email": "victoria.pavlova@nomail.com",
+        "phone": "+7 910 000 00 00"
+    }
+]
