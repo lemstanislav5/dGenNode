@@ -1,0 +1,31 @@
+{
+  "name": "dgennode",
+  "version": "1.0.0",
+  "description": "generator of one million sales data records",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lemstanislav5/dGenNode.git"
+  },
+  "keywords": [
+    "generator",
+    "of",
+    "one",
+    "million",
+    "sales",
+    "data",
+    "records"
+  ],
+  "author": "lemstanislav5",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lemstanislav5/dGenNode/issues"
+  },
+  "homepage": "https://github.com/lemstanislav5/dGenNode#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
